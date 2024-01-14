@@ -11,12 +11,8 @@ from model import Toot, create_session
 load_dotenv()
 
 # Get Mastodon credentials from environment variables
-#client_id = os.getenv("MASTODON_CLIENT_ID")
-#client_secret = os.getenv("MASTODON_CLIENT_SECRET")
 access_token = os.getenv("MASTODON_ACCESS_TOKEN")
 api_base_url = os.getenv("MASTODON_API_BASE_URL")
-print('API base URL:')
-print(api_base_url)
 
 mastodon = Mastodon(
     access_token=access_token,

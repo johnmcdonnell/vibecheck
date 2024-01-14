@@ -50,8 +50,6 @@ def generate_algo_tags():
                     messages = [
                         {"role": "user", "content": f"Classify the following text: {toot.content_scrubbed}" }
                         ])
-            # Store the tags in the SQLite database
-            # convert toot_tagged from `TootTags` object to a dict
 
             new_algo_tags = AlgoTags(tagger_version=tagger_version, toot_id=toot.id, tags_json=toot_tagged.model_dump_json())
             session.add(new_algo_tags)
