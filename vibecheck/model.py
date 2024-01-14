@@ -4,14 +4,17 @@ from sqlalchemy import create_engine, Column, Integer, String, DateTime, Foreign
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 import re
 
+
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime):
             return obj.isoformat()  # Convert datetime objects to ISO format
         return json.JSONEncoder.default(self, obj)
 
+
 # Define SQLite database and table using SQLAlchemy
 Base = declarative_base()
+
 
 class Toot(Base):
     __tablename__ = "toots"
@@ -35,25 +38,26 @@ class Toot(Base):
     @property
     def content_scrubbed(self):
         # Remove HTML tags
-        text = re.sub(r'<[^>]+>', ' ', self.content)
-        return f'{self.display_name} posted: {text}'
-    
+        text = re.sub(r"<[^>]+>", " ", self.content)
+        return f"{self.display_name} posted: {text}"
+
     @staticmethod
     def dict_to_json(toot_dict):
         return json.dumps(toot_dict, cls=CustomJSONEncoder)
+
 
 class AlgoTags(Base):
     __tablename__ = "algo_tags"
     id = Column(Integer, primary_key=True)
     tagger_version = Column(String)
-    toot_id = Column(Integer, ForeignKey('toots.id'))
+    toot_id = Column(Integer, ForeignKey("toots.id"))
     tags_json = Column(String)
 
     @property
     def tags(self):
         return json.loads(self.tags_json)
 
-    
+
 def create_session():
     # Create SQLite database engine and session
     engine = create_engine("sqlite:///toots.db")
