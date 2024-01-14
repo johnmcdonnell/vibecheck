@@ -1,4 +1,6 @@
 # VibeCheck 2.0
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 
 The goal of the project is to help users use AI to get the best internet
 content. Stop using corporate algorithms and take back the power. Seek
