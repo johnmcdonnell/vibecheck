@@ -6,7 +6,7 @@ immaculate vibes.
 
 Initial prototype processes Mastodon content.
 
-![Robot processing the internet to generate immaculate vibes for the benefit of all mankind, breathtaking surreal visualization, Hiroshi Nagai aesthetic](https://i.imgur.com/aruxdPe.png)
+![Robot processing the internet to generate immaculate vibes for the benefit of all mankind, breathtaking surreal visualization, Hiroshi Nagai aesthetic](https://github.com/johnmcdonnell/vibecheck/assets/702989/b98d52b8-75be-4bd8-b941-413b8a5f926b)
 
 # Usage
 
