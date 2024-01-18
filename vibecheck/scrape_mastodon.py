@@ -31,11 +31,16 @@ if __name__ == "__main__":
     for toot in toots:
         # Convert toot to json
         toot_json = Toot.dict_to_json(dict(toot))
-
+        if 'reblog' in toot and toot['reblog'] is not None:
+            toot_author = toot['reblog']['account']['acct']
+            toot_content = toot['reblog']['content']
+        else:
+            toot_author = toot['account']['acct']
+            toot_content = toot['content']
         new_toot = Toot(
             id=toot["id"],
-            author=toot["account"]["acct"],
-            content=toot["content"],
+            author=toot_author,
+            content=toot_content,
             created_at=toot["created_at"],
             url=toot["url"],
             raw_blob=toot_json,

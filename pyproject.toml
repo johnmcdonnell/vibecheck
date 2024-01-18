@@ -12,6 +12,7 @@ sqlalchemy = "^2.0.25"
 loguru = "^0.7.2"
 instructor = "^0.4.6"
 black = "^23.12.1"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
