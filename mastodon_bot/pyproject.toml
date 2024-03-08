@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "vibecheck-mastodon-bot"
+version = "0.1.0"
+description = ""
+authors = ["John McDonnell <john.v.mcdonnell@gmail.com>"]
+readme = "README.md"
+packages = [{include = "vibecheck_mastodon_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+feedparser = "^6.0.11"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+python-dotenv = "^1.0.1"
+anthropic = "^0.19.1"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
