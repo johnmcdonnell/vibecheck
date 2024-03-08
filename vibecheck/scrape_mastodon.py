@@ -16,16 +16,15 @@ api_base_url = os.getenv("MASTODON_API_BASE_URL")
 
 mastodon = Mastodon(access_token=access_token, api_base_url=api_base_url)
 
+
 # Use the Mastodon API to fetch the toots from the last two days with requests
 
 if __name__ == "__main__":
     session = create_session()
 
-    # Get the datetime for two days ago
-    two_days_ago = datetime.now() - timedelta(days=2)
-
     # Scrape the feed for toots from the last two days
-    toots = mastodon.timeline(timeline="public", since_id=two_days_ago)
+    toots = mastodon.timeline(timeline="public", limit=40)
+    #toots = mastodon.account_statuses('895746', limit=40)
 
     # Store the toots in the SQLite database
     for toot in toots:

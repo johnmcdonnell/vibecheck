@@ -10,23 +10,26 @@ tagger_version = "0.1"
 
 class TootTags(BaseModel):
     topic: str
+    language: str
     is_polemical: bool
     is_positive_valence: bool
     is_negative_valence: bool
     is_neutral_valence: bool
     is_emotional_language: bool
-    is_political: bool
     is_academic: bool
     is_news: bool
-    is_cringe: bool
-    is_based: bool
-    is_israel_palestine: bool
     is_joke: bool
     is_art: bool
     is_trolling: bool
     is_opinion: bool
     is_academic: bool
     is_informative: bool
+    is_chill: bool
+    is_about_israel_palestine: bool
+    is_about_elon_musk: bool
+    is_about_donald_trump: bool
+    is_about_politics: bool
+
 
 
 def cleanup_toot_text(toot):
