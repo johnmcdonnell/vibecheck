@@ -36,7 +36,7 @@ def generate_summary(entry, max_retries=3):
     soup = BeautifulSoup(content, 'html.parser')
     text = soup.get_text()
     
-    system_prompt = "Create a concise tweet that shares the thesis behind the blog post and why it might be interesting or surprising. Don't use hash tags. To the extent possible, match the tone of the author."
+    system_prompt = "Create a concise tweet that shares the thesis behind the blog post and why it might be interesting or surprising. Don't use hash tags. To the extent possible, match the tone of the author. Return ONLY the tweet, no other commentary."
     
     logger.info(f"Generating summary for post {id}")
     retries = 0
