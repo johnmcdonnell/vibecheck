@@ -134,11 +134,10 @@ def post_to_mastodon(summary, url, access_token):
     else:
         logger.info(f"Posted to mastodon with status {response.status_code}")
 
-def main():
-    
+def repost_rss(feeds):
     access_tokens = load_access_tokens()
     
-    for feed in FEED_LIST:
+    for feed in feeds:
         if feed['username'] not in access_tokens:
             feed_email = GMAIL_ACCOUNT + '+' + feed['username'] + '@gmail.com'
             feed_password = ''.join(random.choices(string.ascii_letters + string.digits, k=16))
@@ -156,4 +155,4 @@ def main():
     
 
 if __name__ == '__main__':
-    main()
+    repost_rss(FEED_LIST)
