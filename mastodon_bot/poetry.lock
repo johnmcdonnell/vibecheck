@@ -8,7 +8,7 @@ python-versions = ">=3.8"
 
 [[package]]
 name = "anthropic"
-version = "0.19.1"
+version = "0.19.2"
 description = "The official Python library for the anthropic API"
 category = "main"
 optional = false
@@ -436,8 +436,8 @@ annotated-types = [
     {file = "annotated_types-0.6.0.tar.gz", hash = "sha256:563339e807e53ffd9c267e99fc6d9ea23eb8443c08f112651963e24e22f84a5d"},
 ]
 anthropic = [
-    {file = "anthropic-0.19.1-py3-none-any.whl", hash = "sha256:cc0f35b408e158b7a1abde2b8597b174421d7327d32c6620241102ee40af3c4f"},
-    {file = "anthropic-0.19.1.tar.gz", hash = "sha256:99d998548fe4ec597c8488d7fd6df2c879c64c0aa80a14e9383e05676e0603dd"},
+    {file = "anthropic-0.19.2-py3-none-any.whl", hash = "sha256:48f43091e977dac703beb46e46c44c172a443aebddf5fe6dd5776a660abb2907"},
+    {file = "anthropic-0.19.2.tar.gz", hash = "sha256:ed3466ba365bdce5c5dbd2ce7915f59c6d6d8fcd69e79e4452cf06582741ca16"},
 ]
 anyio = [
     {file = "anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8"},
